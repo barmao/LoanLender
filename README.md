@@ -1,4 +1,4 @@
-# LOANLENDER
+# LoanLender
 
 This application is a loan lending platform that allows financial institutions to easily manage and track loan applications. It is built using NodeJS and ExpressJS, and integrates with credit rating, AML, and KYC services to ensure compliance with regulatory requirements and to assess the creditworthiness of borrowers.
 
@@ -16,29 +16,31 @@ To get started with the application, follow these steps:
 
 1. Clone the repository to your local machine:
 
-git clone https://github.com/[username]/LoanLender.git
+`git clone https://github.com/[username]/LoanLender.git`
 
 
 2. Navigate to the project directory:
 
-cd LoanLender
+`cd LoanLender`
 
 
 3. Install the dependencies:
 
-npm install
+`npm install`
 
 
 4. Set up environment variables for the credit rating, AML, and KYC services (consult the documentation of the respective services for more information):
 
-export CREDIT_RATING_API_KEY=[API key]
-export AML_API_KEY=[API key]
-export KYC_API_KEY=[API key]
+`export CREDIT_RATING_API_KEY=[API key]`
+
+`export AML_API_KEY=[API key]`
+
+`export KYC_API_KEY=[API key]`
 
 
 5. Run the development server:
 
-npm start
+`npm start`
 
 
 The application will now be running at http://localhost:3000.
@@ -49,8 +51,7 @@ To deploy the application, you will need to set up a server and build the produc
 
 1. Build the production version of the application:
 
-npm run build
-
+`npm run build`
 
 2. Set up a server to serve the built application (e.g., Apache or Nginx)
 3. Configure the server to serve the `build` directory as the root directory
