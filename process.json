@@ -1,7 +1,7 @@
 {
     "apps": [
         {
-            "name": "LoanLender",
+            "name": "loanlender",
             "script": "./bin/www",
             "watch": true,
             "merge_logs": true,
