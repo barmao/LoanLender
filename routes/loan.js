@@ -2,66 +2,83 @@ var express = require('express');
 var router = express.Router();
 const auth = require("../middleware/auth");
 
-router.post('/', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
-  
-  router.get('/', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
 
-  router.get('/:id', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
+/*  This endpoint would be used to apply for a loan. */
+router.post('/', auth, (reauth,q, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
 
-  router.put('/:id', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
+/*  This endpoint would be used to retrieve a list of loans that have been applied for. */
+router.get('/', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
 
-  //Apply
-  router.post('/apply', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
+/*  This endpoint would be used to retrieve the details of a specific loan. */
+router.get('/:id', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
 
-  //Prepay
-  router.post('/:id/prepay', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
+/*  This endpoint would be used to update the status of a loan. */
+router.put('/:id', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
 
-  //Schedule
-  router.get('/:id/schedule', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
+//Apply
 
-  //Reminders
-  router.post('/:id/reminders', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
+/*  If the application is accepted, it saves the loan application to a database and returns a JSON object containing the loan details. */
+router.post('/apply', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
 
-  router.put('/:id/reminders', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
+//Prepay
 
-  router.get('/:id/reminders', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
+/*  Accepts a loan ID as a URL parameter and a JSON object containing the amount being prepaid. */
+router.post('/:id/prepay', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
 
-  //Documents
-  router.post('/:id/documents', function(req, res, next) {
-    res.send('respond with a resource');
-    res.status(200);
-  });
+//Schedule
 
-  
+/* Accepts a loan ID as a URL parameter and returns a JSON object containing the loan's payment schedule. */
+router.get('/:id/schedule', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
+
+//Reminders
+
+/*   Accepts a loan ID as a URL parameter and a JSON object containing the borrower's contact information and the desired frequency of payment reminders. */
+router.post('/:id/reminders', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
+
+/* It updates the information in the database and adjusts the automatic reminders accordingly. */
+router.put('/:id/reminders', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
+
+/*  Accepts a loan ID as a URL parameter and returns a JSON object containing the current information for the payment reminders. */
+router.get('/:id/reminders', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
+
+//Documents
+
+/*  This endpoint would be used to upload supporting documents for a loan application. */
+router.post('/:id/documents', auth,  (req, res, next) => {
+  res.send('respond with a resource');
+  res.status(200);
+});
+
+
 
 module.exports = router;
