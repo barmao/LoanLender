@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const auth = require("../middleware/auth");
+const auth = require("../middlewares/auth");
 
 
 /*  This endpoint would be used to apply for a loan. */
