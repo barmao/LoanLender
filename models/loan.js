@@ -40,7 +40,12 @@ const loanSchema = new mongoose.Schema({
     type: String,
     enum: ['active', 'repaid', 'defaulted','pending', 'approved', 'rejected', 'completed'],
     default: 'pending',
-  }
+  },
+  schedule: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Schedule',
+    required: false
+  },
 });
 
 module.exports = mongoose.model('Loan', loanSchema);
