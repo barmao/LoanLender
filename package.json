@@ -6,13 +6,12 @@
     "pm2": "pm2 start process.json --no-daemon",
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
-    "test": "mocha --reporter spec",
+    "test": "jest --coverage",
     "migrate": "node ./database/migrations/migrate.js"
   },
   "dependencies": {
     "amqplib": "^0.10.3",
     "bcryptjs": "^2.4.3",
-    "chai": "^4.3.7",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.0.3",
@@ -21,7 +20,6 @@
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.21",
-    "mocha": "^10.2.0",
     "mongoose": "^6.8.1",
     "morgan": "~1.9.1",
     "pm2": "^5.2.2",
@@ -30,6 +28,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "jest": "^29.3.1",
     "nodemon": "^2.0.20"
   }
 }

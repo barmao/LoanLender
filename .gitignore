@@ -3,3 +3,8 @@ node_modules/
 thumbs.db
 *.log
 .env
+.vscode
+
+# Ignore test-related files
+/coverage.data
+/coverage/
